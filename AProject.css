@@ -21,6 +21,8 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #0a0a0a;
+    /* background-color: gainsboro;
+    background-color: #F5F6FA; */
 }
 
 /* Navbar */
@@ -32,6 +34,20 @@ body {
     background-color: #0a0a0a;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar.active {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .navbar .logo {
@@ -88,9 +104,9 @@ body {
 .login-btn {
     margin-right: 20px;
     background: none;
-    border: 2px solid #f4ae0b;
+    border: 2px solid #f5f4f2;
     padding: 10px 20px;
-    color: #fff;
+    color: white;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     border-radius: 8px;
@@ -106,6 +122,10 @@ body {
     display: block;
 }
 
+.login-btn h1 {
+    font-weight: 400;
+}
+
 .login-btn::before {
     content: "";
     position: absolute;
@@ -114,6 +134,7 @@ body {
     width: 400%;
     height: 100%;
     background: linear-gradient(115deg, #ff8c00, #ff0080);
+    background: linear-gradient(to right, #08aeea, #2af598);
     background-size: 25% 100%;
     animation: gradient-animation 0.75s linear infinite;
     animation-play-state: paused;
@@ -128,7 +149,8 @@ body {
 }
 
 .login-btn:hover {
-    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    /* background-image: linear-gradient(to right, #00c6ff, #0072ff); */
+    background-image: linear-gradient(to right, #eaeff0, #f0f3f7);
     border-color: transparent;
     box-shadow: 0 0 15px rgba(0, 198, 255, 0.8);
 }
@@ -220,7 +242,9 @@ body {
 
 .search-bar button {
     width: 20%;
-    background-image: linear-gradient(to right, #ff8c00, #ff0080);
+    /* background-image: linear-gradient(to right, #ff8c00, #ff0080); */
+    background: #EAE2FB;
+    opacity: 0.9;
     border: none;
     border-radius: 0 5px 5px 0;
     color: black;
@@ -256,6 +280,7 @@ body {
 /* cards section */
 #ctr {
     background-color: #F5F6FA;
+    background-color: gainsboro;
 }
 
 .off_heading-0 {
@@ -405,10 +430,142 @@ body {
     line-height: 30px;
 }
 
+/* steps instructins */
+
+.opsops {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(135deg, #00416A, #E4E5E6); */
+    background-color: gainsboro;
+}
+
+.container4-opps {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.left4-opps {
+    width: 50%;
+    height: 100%;
+}
+
+.left4-opps .img-opps {
+    background-image: url("https: //images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: fadeInZoom 2s forwards;
+}
+
+.right4-opps {
+    width: 50%;
+    padding: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 2s ease-in-out forwards;
+    animation-delay: 2.5s;
+    position: relative;
+}
+
+.right4-opps h1 {
+    font-size: 35px;
+    color: #0B4970;
+    animation: moveLeftRight 5s ease-in-out infinite;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Georgia', serif;
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-20px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.steps-list-opps {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.steps-list-opps li {
+    color: black;
+    font-size: 30px;
+    font-family: 'Times New Roman',serif;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 1s ease, opacity 1s ease;
+    position: relative;
+}
+
+.steps-list-opps li:before {
+    content: attr(data-step);
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* ChangingCards */
 .optionchange {
-    /* background-color:#F5F6FA; */
-    background-color: gainsboro;
+    background-color:#F5F6FA;
+    /* background-color: gainsboro; */
+    
 }
 
 .optional-main-page {
@@ -481,6 +638,7 @@ body {
 .optional-content {
     color: #1b1b1b;
     width: 75%;
+    /* background-color: #F2F3F7; */
     background-color: white;
     border-radius: 10px;
     padding: 30px;
@@ -526,11 +684,11 @@ body {
 }
 
 .optional-left {
-    background-color: #FFDDC1;
+    background-color: #EAE2FB;
 }
 
 .optional-right {
-    background-color: #C1E1FF;
+    background-color: #FFEDAC;
 }
 
 
@@ -567,7 +725,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 60vh;
-    border-radius: 20px;
+    border-radius: 25px;
     cursor: pointer;
     flex: 1;
     margin: 10px;
@@ -623,6 +781,7 @@ body {
     font-size: 16px;
     margin-top: 10px;
     color: white;
+    text-align: end;
 }
 
 .panel.active .panel-preview {
@@ -630,7 +789,7 @@ body {
 }
 
 .left {
-    width: 50%;
+    width: 100%;
     background-color: gainsboro;
     display: flex;
     align-items: center;
@@ -638,7 +797,7 @@ body {
     padding: 20px;
     color: #333;
     font-size: 18px;
-    text-align: center;
+    text-align:start;
     height: 100%;
 }
 
