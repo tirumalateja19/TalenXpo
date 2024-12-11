@@ -17,10 +17,10 @@
             <div class="logo">TalenXpo</div>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Explore Opportunities</a></li>
-                <li><a href="#">Our vision</a></li>
-                <li><a href="#">Current Interns</a></li>
-                <li><a href="#">Students Info</a></li>
+                <li><a href="#dms">Explore Domains</a></li>
+                <li><a href="#optionchange">Current Interns</a></li>
+                <li><a href="#opsops">Our vision</a></li>
+                <li><a href="#Officials01">Officials</a></li>
             </ul>
             <div class="actions">
                 <button class="login-btn"><span>APPLY NOW</span></button>
@@ -51,130 +51,102 @@
                 </div>
                 <p>Frequent Searches</p>
                 <ul class="suggestions">
-                    <li>Python Developer</li>
-                    <li>React developer</li>
+                    <li>Web Development</li>
+                    <li>Artificial Intelligence</li>
                     <li>Full Stack</li>
-                    <li>Databases</li>
+                    <li>Cybersecurity</li>
                     <li>Java Developer</li>
                 </ul>
             </div>
         </section>
     </div>
 
-    <!-- cards -->
-    <div id="ctr">
-        <h1 class="off_heading-0">THE STUDENTS OF TALENXPO</h1>
-        <div class="container">
-            <div class="card">
-                <div class="card-img-holder">
-                    <img src="https://cdn.pixabay.com/photo/2020/01/07/23/01/sketch-4748895_1280.jpg" alt="Blog image">
-                </div>
-                <h3 class="blog-title">FRONT-END DEVELOPER</h3>
-                <span class="blog-time">TIRUMALA TEJA</span>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus
-                    ex
-                    accumsan at.
-                </p>
-                <div class="options">
-                    <span>Read Full Blog</span>
-                    <button class="btnn">Explore</button>
+    <!-- domains -->
+    <div id="dms">
+        <div class="domain-container">
+            <div class="domain-header">
+                <h1>Explore Internship Domains</h1>
+                <br><br>
+            </div>
+
+            <!-- AI Domain Card -->
+            <div id="dmsai">
+                <div class="domain-card-new" onclick="toggleSubdomainsNew('domainAI-new')">
+                    <img src="https://imageio.forbes.com/specials-images/imageserve/645b3eca0059191fb09c02fa/15-Amazing-Real-World-Applications-Of-AI-Everyone-Should-Know-About/960x0.jpg?height=400&width=711&fit=bounds"
+                        alt="AI Domain">
+                    <div class="domain-content-new">
+                        <h3>AI (Artificial Intelligence)</h3>
+                        <p>Explore the fascinating world of AI, including machine learning, deep learning, and neural
+                            networks.
+                            Dive into cutting-edge technologies that are shaping the future.</p>
+                        <div class="subdomain-list-new" id="domainAI-new-subdomains">
+                            <ul>
+                                <center>
+                                    <li onclick="goToApplicationPageNew('AI', 'Machine Learning')">Machine Learning</li>
+                                    <li onclick="goToApplicationPageNew('AI', 'Deep Learning')">Deep Learning</li>
+                                    <li onclick="goToApplicationPageNew('AI', 'Natural Language Processing')">Natural
+                                        Language
+                                        Processing</li>
+                                </center>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Blog image">
-                </div>
-                <h3 class="blog-title">MERN STACK DEVELOPER</h3>
-                <span class="blog-time">DEEPAK</span>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus
-                    ex
-                    accumsan at.
-                </p>
-                <div class="options">
-                    <span>Read Full Blog</span>
-                    <button class="btnn">Explore</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1514355315815-2b64b0216b14?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Blog image">
-                </div>
-                <h3 class="blog-title">FULL STACK DEVELOPER</h3>
-                <span class="blog-time">MANIKANTA</span>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus
-                    ex
-                    accumsan at.
-                </p>
-                <div class="options">
-                    <span>Read Full Blog</span>
-                    <button class="btnn">Explore</button>
+            <!-- Web Development Domain Card -->
+            <div id="dmsweb">
+                <div class="domain-card-new" onclick="toggleSubdomainsNew('domainWebDev-new')">
+                    <img src="https://itspectrumsolutions.com/wp-content/uploads/2024/04/1_pE2fOVDikEUwiQJlh4ggzg.jpeg"
+                        alt="Web Development Domain">
+                    <div class="domain-content-new">
+                        <h3>Web Development</h3>
+                        <p>Learn the art of building stunning websites and robust web applications. From frontend to
+                            backend,
+                            master the skills required to become a full-stack developer.</p>
+                        <div class="subdomain-list-new" id="domainWebDev-new-subdomains">
+                            <ul>
+                                <center>
+                                    <li onclick="goToApplicationPageNew('Web Development', 'Frontend')">Mern Stack</li>
+                                    <li onclick="goToApplicationPageNew('Web Development', 'Backend')">Django</li>
+                                    <li onclick="goToApplicationPageNew('Web Development', 'Full Stack')">Full Stack
+                                    </li>
+                                </center>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1719659004081-1f4ea681c9c8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Blog image">
-                </div>
-                <h3 class="blog-title">PYTHON DEVELOPER</h3>
-                <span class="blog-time">VAMSHI</span>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus
-                    ex
-                    accumsan at.
-                </p>
-                <div class="options">
-                    <span>Read Full Blog</span>
-                    <button class="btnn">Explore</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-holder">
-                    <img src="https://plus.unsplash.com/premium_photo-1681505220220-410658c008da?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Blog image">
-                </div>
-                <h3 class="blog-title">FRONT-END DEVELOPER</h3>
-                <span class="blog-time">ANAS</span>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus
-                    ex
-                    accumsan at.
-                </p>
-                <div class="options">
-                    <span>Read Full Blog</span>
-                    <button class="btnn">Explore</button>
+            <!-- Cybersecurity Domain Card -->
+            <div id="dmscs">
+                <div class="domain-card-new" onclick="toggleSubdomainsNew('domainCybersecurity-new')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHn68-VsE7VrVPrsb3x0IoqFFNVUTxzVLgQ&s"
+                        alt="Cybersecurity Domain">
+                    <div class="domain-content-new">
+                        <h3>Cybersecurity</h3>
+                        <p>Delve into the field of cybersecurity, focusing on protecting networks, ethical hacking, and
+                            safeguarding sensitive information in the digital world.</p>
+                        <div class="subdomain-list-new" id="domainCybersecurity-new-subdomains">
+                            <ul>
+                                <center>
+                                    <li onclick="goToApplicationPageNew('Cybersecurity', 'Network Security')">Network
+                                        Security
+                                    </li>
+                                    <li onclick="goToApplicationPageNew('Cybersecurity', 'Penetration Testing')">
+                                        Penetration
+                                        Testing
+                                    </li>
+                                    <li onclick="goToApplicationPageNew('Cybersecurity', 'Forensics')">Forensics</li>
+                                </center>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img-holder">
-                    <img src="https://plus.unsplash.com/premium_photo-1661913933190-f4e34ae2176c?q=80&w=1704&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Blog image">
-                </div>
-                <h3 class="blog-title">JAVA DEVELOPER</h3>
-                <span class="blog-time">ROSHAN RAJ</span>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis viverra turpis, non cursus
-                    ex
-                    accumsan at.
-                </p>
-                <div class="options">
-                    <span>Read Full Blog</span>
-                    <button class="btnn">Explore</button>
-                </div>
-            </div>
-        </div>
-        <!-- button exploremore -->
-        <div class="explore">
-            <a class="codepen-button"><span>EXPLORE MORE</span></a>
         </div>
     </div>
 
     <!-- changeingCard -->
-    <div class="optionchange">
+    <div id="optionchange">
         <h1 class="off_heading-0">INFORMATION OF STUDENTS</h1>
         <div class="optional-main-page">
             <div class="optional-container">
@@ -272,10 +244,13 @@
     </div>
 
     <!-- steps to follow -->
-    <div class="opsops">
+    <div id="opsops">
         <div class="container4-opps">
             <div class="left4-opps">
-                <div class="img-opps"></div>
+                <div class="img-opps">
+                    <img src="https://www.naceweb.org/images/default-source/2024/feature/collaborating-with-faculty-for-successful-student-outcomes-institutional-effectiveness-xlarge.jpg"
+                        alt="students" height="100%" width="100%">
+                </div>
             </div>
 
             <div class="right4-opps">

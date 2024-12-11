@@ -60,3 +60,17 @@ function removeActiveClasses() {
     panel.classList.remove("active");
   });
 }
+
+// domains
+function toggleSubdomainsNew(domainId) {
+  const subdomainsDiv = document.getElementById(domainId + "-subdomains");
+  subdomainsDiv.style.display =
+    subdomainsDiv.style.display === "block" ? "none" : "block";
+}
+
+function goToApplicationPageNew(domain, subdomain) {
+  const url = `application.html?domain=${encodeURIComponent(
+    domain
+  )}&subdomain=${encodeURIComponent(subdomain)}`;
+  window.location.href = url;
+}

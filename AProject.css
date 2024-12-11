@@ -4,6 +4,7 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html,
@@ -278,169 +279,119 @@ body {
 }
 
 /* cards section */
-#ctr {
-    background-color: #F5F6FA;
-    background-color: gainsboro;
-}
 
-.off_heading-0 {
-    font-size: 35px;
-    color: #0a0a0a;
-    text-align: center;
-    padding: 30px;
-}
-
-.container {
-    width: 100%;
-    max-width: 100vw;
+#dms {
+    /* background-color: gainsboro; */
     height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: black;
+}
+
+.domain-container {
+    background-color: white;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.domain-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.domain-header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.domain-header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.domain-card-new {
+    background-color: gainsboro;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 0;
+    transition: transform 0.3s;
+}
+
+.domain-card-new:hover {
+    transform: scale(1.02);
+}
+
+.domain-card-new img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.domain-content-new {
+    flex-grow: 1;
+    width: 70%;
+}
+
+.domain-content-new h3 {
+    margin-bottom: 10px;
+}
+
+.domain-content-new p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.subdomain-list-new {
+    display: none;
+    margin-top: 10px;
+}
+
+.subdomain-list-new ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.card {
-    width: 25rem;
-    height: auto;
-    background: #fff;
-    border-radius: 1.5rem;
-    padding: 1.5rem;
-    overflow: hidden;
-    position: relative;
-    margin: 25px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.446);
-}
-
-.card-img-holder {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
-.card-img-holder img {
-    width: 100%;
-    height: auto;
-    max-height: 15rem;
-    object-fit: cover;
-    border-radius: 1.5rem;
-}
-
-.blog-title {
-    color: #22215B;
-    padding: 1rem 0;
-    font-size: 1.5rem;
-}
-
-.description {
-    padding: 1rem 0;
-    color: #22215B80;
-    font-size: 1rem;
-}
-
-.blog-time {
-    font-size: 0.8rem;
-    color: #22215B;
-}
-
-.options {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1rem;
-}
-
-.options span {
-    font-weight: 600;
-    color: #22215B;
-}
-
-.btnn {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 400;
-    background: #EEF7FE;
-    color: #22215B;
+.subdomain-list-new ul li {
     cursor: pointer;
-}
-
-/* explore button */
-
-.explore {
-    padding-bottom: 30px;
-}
-
-.codepen-button {
-    display: block;
-    cursor: pointer;
-    color: white;
-    margin: 0 auto;
-    position: relative;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
-    overflow: hidden;
-    padding: 4px;
-    width: 170px;
-    height: 50px;
-    isolation: isolate;
-}
-
-.codepen-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 400%;
-    height: 100%;
-    background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
-    background-size: 25% 100%;
-    animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop 0.75s linear infinite;
-    animation-play-state: paused;
-    translate: -5% 0%;
-    transition: translate 0.25s ease-out;
-}
-
-.codepen-button:hover::before {
-    animation-play-state: running;
-    transition-duration: 0.75s;
-    translate: 0% 0%;
-}
-
-@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
-    to {
-        transform: translateX(-25%);
-    }
-}
-
-.codepen-button span {
-    position: relative;
-    display: block;
-    padding: 5px;
-    font-size: 0.97rem;
-    background: #000;
-    border-radius: 3px;
-    width: 100%;
-    height: 100%;
+    padding: 10px;
+    background-color: white;
+    width: 40%;
+    margin: 5px 0;
+    border-radius: 5px;
     text-align: center;
-    line-height: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.subdomain-list-new ul li:hover {
+    color: green;
+    transform: scale(1.05);
+    background-color: gainsboro;
+    border: 1px solid black;
 }
 
 /* steps instructins */
 
-.opsops {
+#opsops {
     font-family: 'Arial', sans-serif;
     color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: linear-gradient(135deg, #00416A, #E4E5E6); */
-    background-color: gainsboro;
+    background: linear-gradient(135deg, #F5F6FA, #E4E5E6);
+    /* background-color: gainsboro; */
 }
 
 .container4-opps {
@@ -521,7 +472,7 @@ body {
 .steps-list-opps li {
     color: black;
     font-size: 30px;
-    font-family: 'Times New Roman',serif;
+    font-family: 'Times New Roman', serif;
     margin: 20px 0;
     opacity: 0;
     transform: translateY(30px);
@@ -562,10 +513,15 @@ body {
 }
 
 /* ChangingCards */
-.optionchange {
-    background-color:#F5F6FA;
-    /* background-color: gainsboro; */
-    
+#optionchange {
+    background-color: gainsboro;
+
+}
+
+.off_heading-0 {
+    padding: 10px;
+    color: #0a0a0a;
+    text-align: center;
 }
 
 .optional-main-page {
@@ -797,7 +753,7 @@ body {
     padding: 20px;
     color: #333;
     font-size: 18px;
-    text-align:start;
+    text-align: start;
     height: 100%;
 }
 
