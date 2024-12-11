@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Application - Domains</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: gainsboro;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .domain-container {
+            width: 80%;
+            max-width: 1200px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .domain-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .domain-header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .domain-header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .domain-card-new {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .domain-card-new:hover {
+            transform: scale(1.02);
+        }
+
+        .domain-card-new img {
+            width: 30%;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .domain-content-new {
+            flex-grow: 1;
+            width: 70%;
+        }
+
+        .domain-content-new h3 {
+            margin-bottom: 10px;
+        }
+
+        .domain-content-new p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .subdomain-list-new {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .subdomain-list-new ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .subdomain-list-new ul li {
+            cursor: pointer;
+            padding: 10px;
+            background-color: gainsboro;
+            width: 40%;
+            margin: 5px 0;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .subdomain-list-new ul li:hover {
+            color: green;
+            transform: scale(1.05);
+            background-color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="domain-container">
+        <div class="domain-header">
+            <h1>Explore Internship Domains</h1>
+            <br><br>
+        </div>
+
+        <!-- AI Domain Card -->
+        <div class="domain-card-new" onclick="toggleSubdomainsNew('domainAI-new')">
+            <img src="https://imageio.forbes.com/specials-images/imageserve/645b3eca0059191fb09c02fa/15-Amazing-Real-World-Applications-Of-AI-Everyone-Should-Know-About/960x0.jpg?height=400&width=711&fit=bounds"
+                alt="AI Domain">
+            <div class="domain-content-new">
+                <h3>AI (Artificial Intelligence)</h3>
+                <p>Explore the fascinating world of AI, including machine learning, deep learning, and neural networks.
+                    Dive into cutting-edge technologies that are shaping the future.</p>
+                <div class="subdomain-list-new" id="domainAI-new-subdomains">
+                    <ul>
+                        <center>
+                            <li onclick="goToApplicationPageNew('AI', 'Machine Learning')">Machine Learning</li>
+                            <li onclick="goToApplicationPageNew('AI', 'Deep Learning')">Deep Learning</li>
+                            <li onclick="goToApplicationPageNew('AI', 'Natural Language Processing')">Natural Language
+                                Processing</li>
+                        </center>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Development Domain Card -->
+        <div class="domain-card-new" onclick="toggleSubdomainsNew('domainWebDev-new')">
+            <img src="https://itspectrumsolutions.com/wp-content/uploads/2024/04/1_pE2fOVDikEUwiQJlh4ggzg.jpeg"
+                alt="Web Development Domain">
+            <div class="domain-content-new">
+                <h3>Web Development</h3>
+                <p>Learn the art of building stunning websites and robust web applications. From frontend to backend,
+                    master the skills required to become a full-stack developer.</p>
+                <div class="subdomain-list-new" id="domainWebDev-new-subdomains">
+                    <ul>
+                        <center>
+                            <li onclick="goToApplicationPageNew('Web Development', 'Frontend')">Mern Stack</li>
+                            <li onclick="goToApplicationPageNew('Web Development', 'Backend')">Django</li>
+                            <li onclick="goToApplicationPageNew('Web Development', 'Full Stack')">Full Stack</li>
+                        </center>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cybersecurity Domain Card -->
+        <div class="domain-card-new" onclick="toggleSubdomainsNew('domainCybersecurity-new')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHn68-VsE7VrVPrsb3x0IoqFFNVUTxzVLgQ&s"
+                alt="Cybersecurity Domain">
+            <div class="domain-content-new">
+                <h3>Cybersecurity</h3>
+                <p>Delve into the field of cybersecurity, focusing on protecting networks, ethical hacking, and
+                    safeguarding sensitive information in the digital world.</p>
+                <div class="subdomain-list-new" id="domainCybersecurity-new-subdomains">
+                    <ul>
+                        <center>
+                            <li onclick="goToApplicationPageNew('Cybersecurity', 'Network Security')">Network Security
+                            </li>
+                            <li onclick="goToApplicationPageNew('Cybersecurity', 'Penetration Testing')">Penetration
+                                Testing
+                            </li>
+                            <li onclick="goToApplicationPageNew('Cybersecurity', 'Forensics')">Forensics</li>
+                        </center>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSubdomainsNew(domainId) {
+            const subdomainsDiv = document.getElementById(domainId + '-subdomains');
+            subdomainsDiv.style.display = (subdomainsDiv.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function goToApplicationPageNew(domain, subdomain) {
+            const url = `application.html?domain=${encodeURIComponent(domain)}&subdomain=${encodeURIComponent(subdomain)}`;
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+
+</html>
